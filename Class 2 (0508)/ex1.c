@@ -68,7 +68,7 @@ int removeAluno(){
 
     int index_aluno = verificar_index(id_read);
 
-    for (int i = index_aluno; i < idx_disponivel - 1; i++)
+    for (int i = index_aluno; i < idx_disponivel; i++)
     {
         t3A[i] = t3A[i + 1];
     }
