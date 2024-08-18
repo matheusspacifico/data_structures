@@ -9,7 +9,7 @@ typedef struct {
 } Produto;
 
 void copiaProduto(Produto *copiado, Produto *principal) {
-    copiado->nome = (char *)malloc((strlen(principal->nome) + 1) * sizeof(char));
+    copiado->nome = (char *)malloc(41 * sizeof(char));
     
     if (copiado->nome == NULL) {
         printf("Erro ao alocar memoria.\n");
@@ -21,9 +21,10 @@ void copiaProduto(Produto *copiado, Produto *principal) {
     copiado->quantidade = principal->quantidade;
 }
 
-int main() {
+int main(int argc, char const *argv[])
+{
     Produto produto1, produto2;
-    produto1.nome = (char *)malloc(50 * sizeof(char));
+    produto1.nome = (char *)malloc(41 * sizeof(char));
     strcpy(produto1.nome, "Produto A");
     produto1.preco = 10.0;
     produto1.quantidade = 5;

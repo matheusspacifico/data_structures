@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct{
+typedef struct {
     char *nome;
     int idade;
     float altura;
 } Pessoa;
 
-void inicializaPessoa(Pessoa *p, char *n, int i, float a){
-    p->nome = (char *)malloc((strlen(n) + 1) * sizeof(char));
+void inicializaPessoa(Pessoa *p, char *n, int i, float a) {
+    p->nome = (char *)malloc(41 * sizeof(char));
 
     if (p->nome == NULL)
     {
